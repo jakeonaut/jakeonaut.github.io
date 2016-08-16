@@ -13,6 +13,12 @@ function main(){
 	canvasResize();
 	
 	document.getElementById("me_img").onclick = imageClick;
+	window.setInterval(fadeCanvas, 100);
+}
+
+function fadeCanvas(){
+	bg_ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+	bg_ctx.fillRect(0, 0, bg_canvas.width, bg_canvas.height);
 }
 
 function imageClick(){

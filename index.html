@@ -2,8 +2,6 @@
     <head>
         <title>jake trower</title>
         <script src="./index.js"></script>
-		
-      <link rel="stylesheet" type="text/css" href="/content/style.css" />
         <style>
 			body{
 				font-size: 150%;
@@ -37,6 +35,27 @@
 				margin: -10px;
 				margin-top: -5px;
 			}
+			#bio{
+				display: none;
+				width: 540px;
+				margin: 0 auto;
+				max-width: 540px;
+				height: 540px;
+				max-height: 540px;
+				min-height: 540px;
+				border: 1px solid black;
+				overflow-x: hidden;
+			}
+			#about_1{
+				font-size:20px;
+				font-weight:bold;
+				white-space: nowrap;
+			}
+			#artprog{
+				color:#00ffff;
+			}
+			.social_link{ text-decoration: none; }
+			.social_icon{ border: 1px solid black; width: 32px; height: 32px;}
         </style>
     </head>
     <body>
@@ -44,19 +63,71 @@
 		<canvas id="bg-canvas" style="opacity: 0.9"></canvas>
         <div class="indent">-software engineer @ <span style="color:#00ee00;">google</span>&nbsp;</div>
 		<br/>
-        <div class="indent">-hobbyist <a href="http://textscript.nfshost.com" target="_blank"><span style="color:#00eeee;font-size:120%;">art programmer</span></a>&nbsp;</div>
+        <div class="indent"><span style="font-size: 150%;">-hobbyist <a href="http://textscript.nfshost.com" target="_blank" style="text-decoration: none;"><span id="artprog" style="font-size:120%;">art programmer</span></a>&nbsp;</span><span id="blinky" style="font-size: 80%;float:right;margin-top:15px;">&lt;- clickable!!</span></div>
 		<br/><br/>
-        <div class="indent">-plant whisperer? (no)
-		</div>
 		<br/>
 	<br/><br/>
-        <center>
+        <center><span id="biopic">
 			click me for more bio!<br/>
 			<img src="me.jpg" id="me_img" style="cursor: pointer;"/>
 			<br/>
 			lil ol' me<br/>
 			<span style="font-size: 50%;"><a href="http://hotdog.storenvy.com/" target="_blank">shirt by hot dog</a></span>
-		</center>
+		</span></center>
+		
+		<div style="text-align: center;">	
+		  <span id="bio" style="text-align: left;">
+			<div class="about_div" id="about_1">
+				one day i hope windows will automatically upgrade me
+			</div>
+			<script src="indexphp_status.js"></script>
+			
+			<span style="color:#0000ff;font-weight:normal;font-size:14px;">&lt;br/&gt;</span><br/>
+			<span style="color:#0000ff;font-weight:normal;font-size:14px;">&lt;br/&gt;</span><br/>
+			<span style="color:#0000ff;font-weight:normal;font-size:14px;">&lt;br/&gt;</span><br/>
+			<span style="color:#0000ff;font-weight:normal;font-size:14px;">&lt;br/&gt;</span><br/>
+			<span style="color:#0000ff;font-weight:normal;font-size:14px;">&lt;br/&gt;</span><br/><br/><br/>
+			<div>
+				hello world, it is me!! 
+				<br/><br/>
+				i was born in mountain home, idaho &amp; grew up in southeast georgia. 
+				<br/><br/>
+				i like notepad++ and making dumb little things with my best friend <a href="http://alpuente.github.io" target="_blank">amy</a>
+				<br/><br/>
+				i graduated from the university of alabama in 2016 with a master's in computer science
+				<br/><br/>
+				you can check me out on these cool websites for squares
+				<br/><br/>
+				<a href="https://www.linkedin.com/in/jake-trower-9109857a" target="_blank" class="social_link">
+					<img src="contact/linkedin.png" alt="linkedin" class="social_icon"/>
+				</a>
+				<a href="https://github.com/jakeonaut" target="_blank" class="social_link">
+					<img src="contact/github.png" alt="github" class="social_icon"/>
+				</a>
+				<a id="mailto" href="mailto:cakeandturtles@gmail.com?subject=Hello, World!" target="_blank" onclick="RandomizeMailSubject();" class="social_link">
+					<img src="contact/email.png" alt="email" class="social_icon"/>
+				</a>
+				<a href="https://twitter.com/cakeandturtles" target="_blank" class="social_link">
+					<img src="contact/twitter.png" alt="twitter" class="social_icon"/>
+				</a>
+				<a href="http://cakeandturtles.tumblr.com/" target="_blank" class="social_link">
+					<img src="contact/tumblr.png" alt="tumble" class="social_icon"/>
+				</a>
+				<a href="http://cakeandturtles.itch.io/" target="_blank" class="social_link">
+					<img src="contact/itchio.png" alt="itchio" class="social_icon"/>
+				</a>
+				<a href="http://gamejolt.com/profile/cakeandturtles/118578/" target="_blank" class="social_link">
+					<img src="contact/gamejolt.png" alt="gamejolt" class="social_icon"/>
+				</a>
+
+				<a href='http://www.neopets.com/~_Shy__1' target='_blank'>
+					<img src='http://images.neopets.com/badges/badge_footer12.gif' width='80' height='20' border='0' title='Get your own Neopet at neopets.com!'>
+				</a><br/>
+				
+				<span style="font-size: 50%;">cuz the icons r square</span>
+			</div>
+		</div>
+		
 	<br/>
 	<br/>
 	<br/>

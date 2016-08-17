@@ -14,15 +14,45 @@ function main(){
 	
 	document.getElementById("me_img").onclick = imageClick;
 	window.setInterval(fadeCanvas, 100);
+	window.setInterval(blinky, 500);
+	
+	document.getElementById("artprog").onmouseover = hoverOver;
+	document.getElementById("artprog").onmouseout = hoverOut;
+}
+
+var thing = 0;
+function hover(){
+	if (!is_hover) return;
+	thing+= 1;
+	
+	document.getElementById("artprog").style.marginLeft = thing+"px";
+	document.getElementById("artprog").style.marginRight = "-"+thing+"px";
+}
+
+var is_hover = false;
+function hoverOver(){ is_hover = true; }
+function hoverOut(){ is_hover = false; }
+
+var blink = true;
+function blinky(){
+	var dom = document.getElementById("blinky");
+	if (blink)
+		dom.style.visibility = "hidden";
+	else dom.style.visibility = "";
+	blink = !blink;
 }
 
 function fadeCanvas(){
+	hover();
 	bg_ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
 	bg_ctx.fillRect(0, 0, bg_canvas.width, bg_canvas.height);
 }
 
 function imageClick(){
-	alert("it doesn't work yet");
+	var biopic = document.getElementById("biopic");
+	var bio = document.getElementById("bio");
+	biopic.style.display = "none";
+	bio.style.display = "inline-block";
 }
 
 function canvasResize(){

@@ -46,10 +46,21 @@
 				border: 1px solid black;
 				overflow-x: hidden;
 			}
+            #bio_feed{
+                display:none;
+                float: left;
+                border: 1px solid black;
+                height: 540px;
+                max-height: 540px;
+                min-height: 540px;
+                width: 200px;
+                margin-left: -1px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
 			#about_1{
-				font-size:20px;
-				font-weight:bold;
-				white-space: nowrap;
+				font-size:16px;
+                
 			}
 			#artprog{
 				color:#00ffff;
@@ -75,13 +86,9 @@
 			<span style="font-size: 50%;"><a href="http://hotdog.storenvy.com/" target="_blank">shirt by hot dog</a></span>
 		</span></center>
 		
-		<div style="text-align: center;">	
-		  <span id="bio" style="text-align: left;">
-			<div class="about_div" id="about_1">
-				one day i hope windows will automatically upgrade me
-			</div>
-			<script src="indexphp_status.js"></script>
-			
+		<div style="text-align: center;">
+            <div>
+		  <span id="bio" style="text-align: left;">			
 			<span style="color:#0000ff;font-weight:normal;font-size:14px;">&lt;br/&gt;</span><br/>
 			<span style="color:#0000ff;font-weight:normal;font-size:14px;">&lt;br/&gt;</span><br/>
 			<span style="color:#0000ff;font-weight:normal;font-size:14px;">&lt;br/&gt;</span><br/>
@@ -90,9 +97,11 @@
 			<div>
 				hello world, it is me!! 
 				<br/><br/>
-				i was born in mountain home, idaho &amp; grew up in southeast georgia. 
+				i was born in idaho &amp; grew up in georgia. 
 				<br/><br/>
 				i like notepad++ and making dumb little things with my gal pal <a href="http://alpuente.github.io" target="_blank">amy puente</a>
+                <br/><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&gt;<a href="http://pura-vida.github.io/website/" target="_blank">here is our cool maze</a>
 				<br/><br/>
 				i graduated from the university of alabama in 2016 with a master's in computer science
 				<br/><br/>
@@ -121,12 +130,21 @@
 				</a>
 
 				<a href='http://www.neopets.com/~_Shy__1' target='_blank'>
-					<img src='http://images.neopets.com/badges/badge_footer12.gif' width='80' height='20' border='0' title='Get your own Neopet at neopets.com!'>
+					<img src='contact/neopet.png' title='Get your own Neopet at neopets.com!'>
 				</a><br/>
 				
 				<span style="font-size: 50%;">cuz the icons r square</span>
 			</div>
+            </span>
+            <span id="bio_feed" style="text-align: left;">
+                <div class="about_div" id="about_1">
+                    one day i hope windows will automatically upgrade me
+                </div>
+                <script src="indexphp_status.js"></script>
+            </span>
+            </div>
 		</div>
+        <div style="clear:both;"></div>
 		
 	<br/>
 	<br/>

@@ -51,13 +51,16 @@ function fadeCanvas(){
 function imageClick(){
 	var biopic = document.getElementById("biopic");
 	var bio = document.getElementById("bio");
+    var biofeed = document.getElementById("bio_feed");
 	biopic.style.display = "none";
 	bio.style.display = "inline-block";
+    biofeed.style.display = "inline-block";
+    fillDiv(); //indexphp_status.js defined function
 }
 
 function canvasResize(){
-	bg_canvas.width = window.innerWidth;
-	bg_canvas.height = window.innerHeight;
+	bg_canvas.width = window.innerWidth-32;
+	bg_canvas.height = window.innerHeight-32;
 	
 	bg_ctx.fillStyle = "#ffffff";
 	bg_ctx.fillRect(0, 0, bg_canvas.width, bg_canvas.height);

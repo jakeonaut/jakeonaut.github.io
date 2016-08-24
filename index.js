@@ -8,6 +8,7 @@ function main(){
 	bg_canvas = document.getElementById("bg-canvas");
 	bg_canvas.style.zIndex = -9999;
 	window.onmousemove = canvasMouseMove;
+    window.onclick = canvasMouseClick;
 	bg_ctx = bg_canvas.getContext("2d");
 	window.onresize = canvasResize;
 	canvasResize();
@@ -69,13 +70,32 @@ function canvasResize(){
     bg_ctx.mozImageSmoothingEnabled = false;
     bg_ctx.imageSmoothingEnabled = false;
 }
+
+function getXY(e){
+    //http://stackoverflow.com/questions/3464876/javascript-get-window-x-y-position-for-scroll
+    var doc = document.documentElement;
+    var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
+    var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+    
+    return [e.clientX + left, e.clientY + top];
+}
+
 function canvasMouseMove(e){
-	var x = e.clientX;
-	var y = e.clientY;
+	var xy = getXY(e);
+    var x = xy[0];
+    var y = xy[1];
 	bg_ctx.fillStyle = "#ff00ff";
 	
 	var size = Math.floor(Math.random()*15)+5;
 	bg_ctx.fillRect(x-Math.floor(size/2), y-Math.floor(size/2), size, size);
+}
+function canvasMouseClick(e){
+    var xy = getXY(e);
+    var x = xy[0];
+    var y = xy[1];
+    bg_ctx.fillStyle = "#00ff00";
+    var size = Math.floor(Math.random()*50)+10;
+    bg_ctx.fillRect(x-Math.floor(size/2), y-Math.floor(size/2), size, size);
 }
 
 function scrambleNameStart(){

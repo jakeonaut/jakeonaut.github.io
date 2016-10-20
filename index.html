@@ -82,21 +82,17 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
 function resize(dont_redraw) {
 	var new_canvas, new_context;
-	if (!dont_redraw) {
-		// i thought this works.. but it doesnt'!
-		new_canvas = document.createElement('canvas');
-		new_context = new_canvas.getContext('2d');
-		new_canvas.width = canvas.width;
-		new_canvas.height = canvas.height;
-		new_context.drawImage(canvas, 0, 0);
-	}
+	// i thought this works.. but it doesnt'!
+	new_canvas = document.createElement('canvas');
+	new_context = new_canvas.getContext('2d');
+	new_canvas.width = canvas.width;
+	new_canvas.height = canvas.height;
+	new_context.drawImage(canvas, 0, 0);
 	
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 	
-	if (!dont_redraw) {
-		ctx.drawImage(new_canvas, 0, 0);
-	}
+	ctx.drawImage(new_canvas, 0, 0);
 }
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -119,14 +115,8 @@ function bugcatch(teleport) {
 		moving = true;
 		scurryid = window.setInterval(scurry, 10);
 	}
-	var bleft = bug.style.left;
-	var btop = bug.style.top;
-	bleft = Number(bleft.substr(0, bleft.length-2));
-	btop = Number(btop.substr(0, btop.length-2));
-	ctx.drawImage(document.getElementById("bugimg"), bleft, btop);
-	ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
-	ctx.fillRect(bleft, btop, 16, 16);
 };
+var count = 0;
 function scurry() {
 	var bleft = bug.style.left;
 	var btop = bug.style.top;
@@ -143,6 +133,14 @@ function scurry() {
 	}
 	bug.style.left = bleft;
 	bug.style.top = btop;
+	
+	count++;
+	if (count >= 20) {
+		ctx.drawImage(document.getElementById("bugimg"), bleft, btop);
+		ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
+		ctx.fillRect(bleft, btop, 16, 16);
+		count = 0;
+	}
 }
 bugcatch(true);
 </script>

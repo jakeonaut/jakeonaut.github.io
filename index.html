@@ -7,7 +7,7 @@ spirit egg
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<canvas id="canvas" style="position: absolute;top:0px;left:0px;"></canvas>
+<canvas id="canvas" style="position: absolute;top:0px;left:0px;z-index:-999"></canvas>
 this is my website and i can cry if i want to 
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -83,6 +83,7 @@ var ctx = canvas.getContext('2d');
 function resize(dont_redraw) {
 	var new_canvas, new_context;
 	if (!dont_redraw) {
+		// i thought this works.. but it doesnt'!
 		new_canvas = document.createElement('canvas');
 		new_context = new_canvas.getContext('2d');
 		new_canvas.width = canvas.width;

@@ -1,0 +1,103 @@
+body {
+  font-family: 'Courier New', 'Courier', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border: 1px solid grey;
+  background: #ffff66;
+  border-spacing: 3px;
+  border-collapse: separate;
+  margin: 0 auto;
+  max-width: 640px;
+  /* table-layout: fixed; */
+}
+
+tr {
+  margin-bottom: 3px;
+}
+
+td {
+  border: 1px solid grey;
+  vertical-align: top;
+  padding: 10px;
+}
+
+td.hidden img {
+  display: block;
+  margin-top: 0.5px;
+  outline: 1px solid grey;
+}
+
+ul {
+  padding-left: 16px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* miscellaneous table classes */
+.table-container {
+  margin: 10px;
+}
+
+.header {
+  font-size: 26px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.hidden {
+  border: none;
+  padding: 0;
+}
+
+/* NAVIGATION */
+.nav {
+  background-color: #ffcccc;
+  margin-left: 0px;
+  margin-right: 0px;
+  max-width: none;
+  width: 100%;
+}
+
+.nav td {
+  font-size: 24px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.nav td:hover {
+  background: #f73b99;
+  cursor: pointer;
+}
+
+.nav td.selected {
+  background-color: #cc8888;
+}
+
+.nav td a {
+  color: black;
+  display: block;
+  margin: -10px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* Fancy header image on ABOUT/HOME */
+table.fancy {
+  width: 100%;
+}
+
+.fancy td {
+  overflow: hidden;
+}
+
+.fancy img {
+  height: 260px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  width: 633px;
+}

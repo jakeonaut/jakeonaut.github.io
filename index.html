@@ -1,152 +1,89 @@
 <html>
-<head>
-<title>
-spirit egg
-</title>
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-</head>
-<body>
-<canvas id="canvas" style="position: absolute;top:0px;left:0px;z-index:-999"></canvas>
-this is my website and i can cry if i want to 
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<i>by jake trower</i>
-<br/>
-<div id="cry" style="font-family:monospace;margin-left: 30px;">: (</div>
-<br/>
-<br/>
-<div style="position:absolute;left:300px;top:100px;">
-<img src="ghost.png"/>
-<br/>
-<br/>
-<br/>
-<div style="margin-left: 100px;">
-<b>news:</b>
-<ul>
-<li>i redesigned my website!</li>
-</ul>
-</div>
-</div>
-<b>links</b>
-<ul>
-<li><a href="http://cakeandturtles.nfshost.com">game collection site</a></li>
-<li><a href="http://cakeandturtles.tumblr.com">my tumblr art blog dump</a></li>
-<li><a href="http://www.twitter.com/jakeonaut">twitter presence</a></li>
-<li><a href="https://www.patreon.com/jakeonaut">patreon page ($$$)</a></li>
-<li><a href="https://www.instagram.com/satucrystal/">instagram pix</a></li>
-<li><a href="https://www.youtube.com/user/cakeandturtles">like comment &amp; subscribe</a></li>
-<li><a href="https://github.com/jakeonaut">github (duh!)</a></li>
-</ul>
-<br/>
-<b>bad designs</b>
-<ul>
-<li><a href="old1/index.html">old design 1</a></li>
-</ul>
-<br/>
-<b>resume & about me</b>
-<ul>
-<li>i work at google</li>
-<li>i need to go to sleep and stop working on this</li>
-</ul>
-<div id="bug" style="position:absolute;cursor:pointer;" onclick="bugcatch(false);"><img id="bugimg" src="bug.png"></div>
-<script>
-console.log(":@) please hack me! (not really) i love attention");
-var span = document.getElementById("cry");
-var cry = 0;
-window.setInterval(function() {
-	switch (cry) {
-		case 0:
-			span.innerHTML = ":'(";
-			break;
-		case 1:
-			span.innerHTML = ":,(";
-			break;
-		default:
-			span.innerHTML = ": (";
-			cry = -1;
-			break;
-	}
-	cry++;
-}, 1000);
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext('2d');
-function resize(dont_redraw) {
-	var new_canvas, new_context;
-	// i thought this works.. but it doesnt'!
-	new_canvas = document.createElement('canvas');
-	new_context = new_canvas.getContext('2d');
-	new_canvas.width = canvas.width;
-	new_canvas.height = canvas.height;
-	new_context.drawImage(canvas, 0, 0);
-	
-	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
-	
-	ctx.drawImage(new_canvas, 0, 0);
-}
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-window.onresize = resize;
-resize(true);
+  <head>
+    <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>jaketrower</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <table id="navigation" class="nav">
+      <tr>
+        <td><a href="./index.html">about</a></td>
+        <td><a href="./games.html">games</a></td>
+        <td>art</td>
+        <td>apps</td>
+        <td>links</td>
+      </tr>
+    </table>
 
-var moving = false;
-var left = 0;
-var _top = 0;
-var bug = document.getElementById("bug");
-var scurryid = null;
-function bugcatch(teleport) {
-	if (moving) return;
-	left = ~~Math.floor(Math.random()*(window.innerWidth-16));
-	_top = ~~Math.floor(Math.random()*(window.innerHeight-16));
-	if (teleport) {
-		bug.style.left = left;
-		bug.style.top = _top;
-	} else {
-		moving = true;
-		scurryid = window.setInterval(scurry, 10);
-	}
-};
-var count = 0;
-function scurry() {
-	var bleft = bug.style.left;
-	var btop = bug.style.top;
-	bleft = Number(bleft.substr(0, bleft.length-2));
-	btop = Number(btop.substr(0, btop.length-2));
-	
-	if (bleft < left) bleft++;
-	if (bleft > left) bleft--;
-	if (btop < _top) btop++;
-	if (btop > _top) btop--;
-	if (btop == _top && bleft == left){ 
-		moving = false;
-		window.clearInterval(scurryid);
-	}
-	bug.style.left = bleft;
-	bug.style.top = btop;
-	
-	count++;
-	if (count >= 20) {
-		ctx.drawImage(document.getElementById("bugimg"), bleft, btop);
-		ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
-		ctx.fillRect(bleft, btop, 16, 16);
-		count = 0;
-	}
-}
-bugcatch(true);
-</script>
-</body>
+    <br/><br/>
+
+    <div class="table-container">
+      <table class="fancy">
+        <caption style="font-size: larger; background: #c0c0c0;"> 
+          <b>about Jake Trower</b>
+        </caption>
+         <!-- <colgroup>
+          <col style="width:20%">
+          <col style="width:80%">
+        </colgroup>    -->
+        <tbody>
+          <tr>
+            <td class="hidden" colspan="2">
+              <img src="Untitled0.png"/>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Name:</strong></td>
+            <td>Jake Trower</td>
+          </tr>
+          <tr>
+            <td><strong>Abilities (work):</strong></td>
+            <td>JavaScript/CSS (advanced), Java (advanced), 
+              <br/>Python (intermediate), C#, WebGL, Unity, GML 
+          </tr>
+          <tr>
+            <td><strong>Abilities (other):</strong></td>
+            <td>drawing (intermediate), piano (intermediate), design, pixel art,
+              writing, running, bird calls
+               </td>
+          </tr>
+          <tr>
+            <td><strong>History:</strong></td>
+            <td>
+              <ul>
+                <li>2016+ - Google: front-end software engineer</li>
+                <li>2016&nbsp; - University of Alabama: Master's of CS</li>
+                <li>2014&nbsp; - <a href="jams.gamejolt.io/glitchjam/games">Won #2
+                  overall in Glitch Jam</a></li>
+                <li>2014&nbsp; - University of Alabama:
+                  <ul>
+                  <li>&nbsp;<a href="http://outreach.cs.ua.edu/pixly/">Undergraduate Research
+                    w/ Jeff Gray</a></li>
+                  </ul></li>
+                <li>2013&nbsp;   - Center for Advanced Public Safety: Student Developer</li>
+                <li>(1992-2011) - Contemplating</li>
+                <li>1992 - Born</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Gallup Strengths:</strong></td>
+            <td>Restoration, Empathy, Input, Ideation, Adaptability</td>
+          </tr>
+          <tr>
+            <td><strong>Personality:</strong></td>
+            <td>(I)ntroverted, i(N)tuitive, (F)eeling, (P)erceptive</td>
+          </tr>
+          <tr>
+            <td><strong>Alignment:</strong></td>
+            <td>Neutral Good</td>
+          </tr>
+          <tr>
+            <td><strong>Zodiac:</strong></td>
+            <td>Sagittarius (sun), Pisces (moon/rising)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>

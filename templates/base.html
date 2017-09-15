@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta name=viewport 
+          content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <table id="navigation" class="nav">
+      <tr>
+        <td {{'class="selected"' if currentPage is equalto 'jaketrower'}}>
+          <a href="./index.html">about</a></td>
+        <td {{'class="selected"' if currentPage is equalto 'games'}}>
+          <a href="./games.html">games</a></td>
+        <td {{'class="selected"' if currentPage is equalto 'visual art'}}>
+          <a href="./art.html">art</a></td>
+        <td {{'class="selected"' if currentPage is equalto 'applications'}}>
+          <a href="./apps.html">apps</a></td>
+        <td {{'class="selected"' if currentPage is equalto 'links'}}>
+          <a href="./links.html">links</a></td>
+      </tr>
+    </table>
+
+    <br/><br/>
+
+    {{pageContent}}
+
+  </body>
+</html>

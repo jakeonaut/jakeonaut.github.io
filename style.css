@@ -18,6 +18,15 @@ tr {
   margin-bottom: 3px;
 }
 
+td.clickable {
+  cursor: pointer;
+  text-align: center;  
+}
+
+td.clickable:hover {
+  background: #e5bb6f;
+}
+
 td {
   border: 1px solid grey;
   vertical-align: top;
@@ -28,6 +37,10 @@ td.hidden img {
   display: block;
   margin-top: 0.5px;
   outline: 1px solid grey;
+}
+
+td.clickable img {
+  outline: 1px solid blue;
 }
 
 ul {
@@ -52,6 +65,12 @@ li {
 .hidden {
   border: none;
   padding: 0;
+}
+
+.info {
+  margin: 0 auto;
+  max-width: 640px;
+  text-align: center;
 }
 
 /* NAVIGATION */

@@ -43,6 +43,10 @@ td.clickable img {
   outline: 1px solid blue;
 }
 
+td.clickable a {
+  pointer-events: none;
+}
+
 ul {
   padding-left: 16px;
 }

@@ -25,8 +25,9 @@ function activateClickableCells() {
   const clickableCells = document.querySelectorAll("td.clickable");
   for (let cell of clickableCells) {
     const link = cell.querySelector("a");
-    if (link) cell.onmouseup = () => {
+    if (link) cell.onclick = (e) => {
       link.click();
+      e.stopPropagation();
     }
   }
 }

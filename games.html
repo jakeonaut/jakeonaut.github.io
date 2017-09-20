@@ -4,6 +4,7 @@
           content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>games</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox/css/lightbox.css">
   </head>
   <body>
     <table id="navigation" class="nav">
@@ -34,7 +35,7 @@
       <tr>
           <td class="clickable">
             <a href="https://cakeandturtles.nfshost.com/games/glitchdungeon.php" >
-              <img src="content/glitch150.png"/>
+              <img src="content/glitch150.png"/><br/><br/>click me!
             </a>
           </td>
           <td>
@@ -147,33 +148,79 @@
 
 <br/><br/>
 
+<div class="info">click an image to view extra content!</div>
 <div class="table-container">
   <table>
     <caption style="font-size: larger; background: #c0c0c0;"> 
       <b>abandonware</b>
     </caption>
     <tr>
-      <td class="hidden">img</td>
+      <td class="clickable">
+        <img src="content/rgbmockup150.png"/>
+        <br/><br/>
+        click me!
+        <div style="display:none;">
+          <a href="content/rgb/rgbmockup00.png" data-lightbox="rgb"></a>
+          <a href="content/rgb/rgbmockup02.png" data-lightbox="rgb"></a>
+          <a href="content/rgb/rgbmockup04.png" data-lightbox="rgb"></a>
+          <a href="content/rgb/rgbmockup05.png" data-lightbox="rgb"></a>
+          <a href="content/rgb/rgbmockup03.png" data-lightbox="rgb"></a>
+          <a href="content/rgb/rgbmockup01.gif" data-lightbox="rgb"></a>
+        </div>
+      </td>
       <td>
-        <h2>music quest:</h2>
-        Another one of my more experimental titles, I probably spent more time
-        looking for "inspiration pictures" and researching different musical
-        genres than I did actually developing this as a game :).
+        <h2>rgb game:</h2>
+        One of the first large scale game projects I worked on. Although I never 
+        finished it, I've included old mockups and assets here. <br/><br/>
+        The <strong>color changing</strong> mechanic would eventually become a 
+        core mechanic of <i>"glitch dungeon"</i> above.
       </td>
     </tr>
     <tr>
-      <td class="hidden"><img src="content/mockups/rgbmockup150.png"/></td>
+      <td class="clickable">img</td>
       <td>
-        <h2>rgb game:</h2>
-        One of the first large scale game projects I worked on, this game went
-        through various designs and prototypes. Although I never finished it, 
-        I've included old mockups and assets here. 
+        <h2>music quest:</h2>
+        Another one of my more experimental titles, this went through several
+        iterations where it was more like a <strong>digital piano</strong> than 
+        an actual game. 
+        <br/><br/>
+        Some core ideas would eventually be present in <i>"echo island"</i> above.
+      </td>
+    </tr>
+    <tr>
+      <td class="clickable">img</td>
+      <td>
+        <h2>summer game/spirit eggs:</h2>
+        A very ambitious title I intended to make one summer. Combining elements
+        of zelda, cave story, and pokemon, I have more ".txt" file ideas than I
+        do actual gameplay.
+        <br/><br/>
+        Core mechanics were eventually used in <i>"the monkey king"</i> above.
+      </td>
+    </tr>
+    <tr>
+      <td class="clickable">img</td>
+      <td>
+        <h2>miscellaneous:</h2>
+        Included here are additional <strong>mockups/screenshots/text files</strong> that
+        represent other previous projects that never came to fruition.
+        <br/><br/>
+        Several ideas/assets eventually made there way into finished projects
+        represented above!
       </td>
     </tr>
   </table>
 </div>
 
+    <script src="lightbox/js/lightbox-plus-jquery.js"></script>
+    <script>
+      lightbox.option({
+        'alwaysShowNavOnTouchDevices': true,
+        'fadeDuration': 100,
+        'resizeDuration': 100,
+        'imageFadeDuration': 100,
+      });
+    </script>
     <script src="js.js"></script>
-
   </body>
 </html>

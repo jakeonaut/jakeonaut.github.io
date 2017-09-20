@@ -4,6 +4,7 @@
           content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>visual art</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox/css/lightbox.css">
   </head>
   <body>
     <table id="navigation" class="nav">
@@ -32,7 +33,15 @@
 <br/><br/>selected fuller pieces from art class
 <br/>+ collage of doodles
 
+    <script src="lightbox/js/lightbox-plus-jquery.js"></script>
+    <script>
+      lightbox.option({
+        'alwaysShowNavOnTouchDevices': true,
+        'fadeDuration': 100,
+        'resizeDuration': 100,
+        'imageFadeDuration': 100,
+      });
+    </script>
     <script src="js.js"></script>
-
   </body>
 </html>

@@ -24,10 +24,23 @@ function activateInfoMessages() {
 function activateClickableCells() {
   const clickableCells = document.querySelectorAll("td.clickable");
   for (let cell of clickableCells) {
+    // Activate a lightbox...
+    const lightboxLink = cell.querySelector("a[data-lightbox]");
+    if (lightboxLink) {
+      cell.onclick = (e) => {
+        lightbox.start($(lightboxLink));
+        e.stopPropagation();
+      }
+      continue;
+    }
+
+    // Activate a link...
     const link = cell.querySelector("a");
-    if (link) cell.onclick = (e) => {
-      link.click();
-      e.stopPropagation();
+    if (link) {
+      cell.onclick = (e) => {
+        link.click();
+        e.stopPropagation();
+      }
     }
   }
 }

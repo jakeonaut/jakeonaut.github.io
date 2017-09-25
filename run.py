@@ -30,6 +30,10 @@ def generateIndex():
 def generateGamesPage():
   generatePage("games.html", "games")
 
+def generateMockupPages():
+  generatePage("rgb.html", "rgb mockup")
+  generatePage("musicquest.html", "music quest mockup")
+
 def generateArtPage():
   generatePage("art.html", "visual art")
 
@@ -39,6 +43,7 @@ def generateAppsPage():
 def main():
   generateIndex()
   generateGamesPage()
+  generateMockupPages()
   generateArtPage()
   generateAppsPage()
 

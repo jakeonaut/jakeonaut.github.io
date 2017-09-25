@@ -4,6 +4,21 @@ body {
   padding: 0;
 }
 
+#popup-container {
+  background: #ffffff;
+  height: 640px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 640px;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
 table {
   border: 1px solid grey;
   background: #ffff66;
@@ -12,6 +27,12 @@ table {
   margin: 0 auto;
   max-width: 640px;
   /* table-layout: fixed; */
+}
+
+caption {
+  background: #c0c0c0;
+  font-size: larger; 
+  font-weight: bold;
 }
 
 tr {

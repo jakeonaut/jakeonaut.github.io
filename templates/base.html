@@ -5,6 +5,7 @@
     <title>{{title}}</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lightbox/css/lightbox.css">
+    <link href="dist/lity.css" rel="stylesheet">    
   </head>
   <body>
     <table id="navigation" class="nav">
@@ -25,6 +26,9 @@
     <br/><br/>
 
     {{pageContent}}
+<!-- 
+    <div id="popup-container">hello
+    </div> -->
 
     <script src="lightbox/js/lightbox-plus-jquery.js"></script>
     <script>
@@ -35,6 +39,7 @@
         'imageFadeDuration': 100,
       });
     </script>
+    <script src="dist/lity.js"></script>
     <script src="js.js"></script>
   </body>
 </html>

@@ -5,6 +5,7 @@
     <title>games</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lightbox/css/lightbox.css">
+    <link href="dist/lity.css" rel="stylesheet">    
   </head>
   <body>
     <table id="navigation" class="nav">
@@ -156,28 +157,10 @@
     </caption>
     <tr>
       <td class="clickable">
-        <img src="content/rgbmockup150.png"/>
+        <img src="content/musicquest150.png"/>
         <br/><br/>
-        click me!
-        <div style="display:none;">
-          <a href="content/rgb/rgbmockup00.png" data-lightbox="rgb"></a>
-          <a href="content/rgb/rgbmockup02.png" data-lightbox="rgb"></a>
-          <a href="content/rgb/rgbmockup04.png" data-lightbox="rgb"></a>
-          <a href="content/rgb/rgbmockup05.png" data-lightbox="rgb"></a>
-          <a href="content/rgb/rgbmockup03.png" data-lightbox="rgb"></a>
-          <a href="content/rgb/rgbmockup01.gif" data-lightbox="rgb"></a>
-        </div>
+        click me
       </td>
-      <td>
-        <h2>rgb game:</h2>
-        One of the first large scale game projects I worked on. Although I never 
-        finished it, I've included old mockups and assets here. <br/><br/>
-        The <strong>color changing</strong> mechanic would eventually become a 
-        core mechanic of <i>"glitch dungeon"</i> above.
-      </td>
-    </tr>
-    <tr>
-      <td class="clickable">img</td>
       <td>
         <h2>music quest:</h2>
         Another one of my more experimental titles, this went through several
@@ -185,6 +168,22 @@
         an actual game. 
         <br/><br/>
         Some core ideas would eventually be present in <i>"echo island"</i> above.
+      </td>
+    </tr>
+    <tr>
+      <td class="clickable">
+        <a href="./rgb.html" >
+          <img src="content/rgbmockup150.png"/>
+          <br/><br/>
+          click me!
+        </a> 
+      </td>
+      <td>
+        <h2>rgb game:</h2>
+        One of the first large scale game projects I worked on. Although I never 
+        finished it, I've included old mockups and assets here. <br/><br/>
+        The <strong>color changing</strong> mechanic would eventually become a 
+        core mechanic of <i>"glitch dungeon"</i> above.
       </td>
     </tr>
     <tr>
@@ -211,6 +210,9 @@
     </tr>
   </table>
 </div>
+<!-- 
+    <div id="popup-container">hello
+    </div> -->
 
     <script src="lightbox/js/lightbox-plus-jquery.js"></script>
     <script>
@@ -221,6 +223,7 @@
         'imageFadeDuration': 100,
       });
     </script>
+    <script src="dist/lity.js"></script>
     <script src="js.js"></script>
   </body>
 </html>

@@ -2,7 +2,12 @@
 window.onload = () => {
   activateInfoMessages();
   activateClickableCells();
+  repositionPopupDiv();
 };
+
+function repositionPopupDiv() {
+  
+}
 
 function activateInfoMessages() {
   // Enable blinking info messages

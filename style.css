@@ -4,6 +4,19 @@ body {
   padding: 0;
 }
 
+#about-header {
+  background-image:url('content/about/sagittarius.png'); 
+  background-position: -85px;
+  height:300px
+}
+
+.fancy img {
+  height: 260px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  width: 633px;
+}
+
 #popup-container {
   background: #ffffff;
   height: 640px;
@@ -19,14 +32,71 @@ iframe {
   margin: 0 auto;
 }
 
-table {
+/* https://stackoverflow.com/questions/248011/how-do-i-wrap-text-in-a-pre-tag */
+pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.caption {
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.caption .column {
+  background-color: #afb9c3
+}
+
+.container {
   border: 1px solid grey;
   background: #ffff66;
   border-spacing: 3px;
   border-collapse: separate;
   margin: 0 auto;
   max-width: 640px;
-  /* table-layout: fixed; */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  border: 1px solid grey;
+  margin: 1px;
+  padding: 10px;
+  vertical-align: top;
+}
+
+div.title {
+  font-size: 175%;
+  margin-bottom: 16px;
+  margin-left: 165px;
+}
+
+.column {
+  width: 189px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.solo {
+  width: 100%;
+}
+
+.left {
+  width: 19%
+}
+
+.right {
+  padding-right: 13px;
+  width: 73%;
 }
 
 caption {
@@ -35,37 +105,26 @@ caption {
   font-weight: bold;
 }
 
-tr {
-  margin-bottom: 3px;
-}
-
-td.clickable {
+.gameimg {
   cursor: pointer;
-  text-align: center;  
+  float: left;
+  margin-right: 16px;
+  outline: 1px solid blue;
+  position: relative;
+  top: -44px;
+  margin-bottom: -43px;
 }
 
-td.clickable:hover {
+div.clickable a {
+  font-weight: bold;
+}
+
+div.clickable a:hover {
   background: #ffaa10;
 }
 
-td {
-  border: 1px solid grey;
-  vertical-align: top;
-  padding: 10px;
-}
-
-td.hidden img {
-  display: block;
-  margin-top: 0.5px;
-  outline: 1px solid grey;
-}
-
-td.clickable img {
-  outline: 1px solid blue;
-}
-
-td.clickable a {
-  pointer-events: none;
+.clickable:hover:not(.solo) {
+  background: #ffaa10;
 }
 
 ul {
@@ -101,16 +160,28 @@ li {
 /* NAVIGATION */
 .nav {
   background-color: #ffcccc;
+  border: 1px solid grey;
+  border-spacing: 3px;
+  border-collapse: separate;
+  margin: 0 auto;
   margin-left: 0px;
   margin-right: 0px;
   max-width: none;
   width: 100%;
 }
 
+
+.nav tr {
+  margin-bottom: 3px;
+}
+
 .nav td {
+  border: 1px solid grey;
   font-size: 24px;
   font-weight: bold;
   overflow: hidden;
+  vertical-align: top;
+  padding: 10px;
 }
 
 .nav td:hover {
@@ -130,18 +201,23 @@ li {
   text-decoration: none;
 }
 
-/* Fancy header image on ABOUT/HOME */
-table.fancy {
-  width: 100%;
-}
+/*********************** RESPONSIVE MOBILE UI *****************************/
+@media screen and (max-width: 650px) {
+	.left {
+	  width: 100%;
+	}
 
-.fancy td {
-  overflow: hidden;
-}
+	.right {
+	  width: 100%;
+  }
 
-.fancy img {
-  height: 260px;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  width: 633px;
+  div.title {
+    margin-left: 0px;
+  }
+  
+  .gameimg {
+    margin-bottom: 0px;
+    position: static;
+    width: 75px;
+  }
 }

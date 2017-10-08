@@ -33,6 +33,8 @@ def generateGamesPage():
 def generateMockupPages():
   generatePage("rgb.html", "rgb mockup")
   generatePage("musicquest.html", "music quest mockup")
+  generatePage("summergame.html", "summer game mockup")
+  generatePage("misc.html", "a bunch of other stuff")
 
 def generateArtPage():
   generatePage("art.html", "visual art")

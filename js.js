@@ -1,8 +1,8 @@
 // main
 window.onload = () => {
-  activateInfoMessages();
-  activateClickableCells();
-  repositionPopupDiv();
+  // activateInfoMessages();
+  // activateClickableCells();
+  // repositionPopupDiv();
 };
 
 function repositionPopupDiv() {
@@ -37,15 +37,19 @@ function activateClickableCells() {
         e.stopPropagation();
       }
       continue;
-    }
+    } else {
 
-    // Activate a link...
-    const link = cell.querySelector("a");
-    if (link) {
-      cell.onclick = (e) => {
-        link.click();
-        e.stopPropagation();
-      }
+      // Activate a link...
+      const link = cell.querySelector("a");
+      // if (link) {
+      //   cell.onclick = (e) => {
+      //     link.click();
+      //     e.stopPropagation();
+      //   }
+      // }
+
+      // Activate a link image
+      const img = cell.querySelector("img");
     }
   }
 }

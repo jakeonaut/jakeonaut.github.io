@@ -10,12 +10,14 @@ def render_from_template(directory, template_name, **kwargs):
   template = env.get_template(template_name)
   return template.render(**kwargs)
 
-def generatePage(template_name, title):
-  pageContent = render_from_template(template_dir, template_name, **{})
+def generatePage(template_name, title, child_dir = ''):
+  pageContent = render_from_template(
+    template_dir + child_dir, template_name, **{})
+
   final_data = { 
     "title": title, 
     "currentPage": title, 
-    "pageContent": pageContent 
+    "pageContent": pageContent
   }
   final_html = render_from_template(template_dir, "base.html", **final_data)
 
@@ -29,12 +31,15 @@ def generateIndex():
 
 def generateGamesPage():
   generatePage("games.html", "games")
+  generatePage("glitchdungeon.html", "glitch dungeon", "/games")
+  generatePage("goblin.html", "goblin catcher", "/games")
+  generatePage("monkeyking.html", "the monkey king", "/games")
 
 def generateMockupPages():
-  generatePage("rgb.html", "rgb mockup")
-  generatePage("musicquest.html", "music quest mockup")
-  generatePage("summergame.html", "summer game mockup")
-  generatePage("misc.html", "a bunch of other stuff")
+  generatePage("rgb.html", "rgb mockup", "/games")
+  generatePage("musicquest.html", "music quest mockup", "/games")
+  generatePage("summergame.html", "summer game mockup", "/games")
+  generatePage("misc.html", "a bunch of other stuff", "/games")
 
 def generateArtPage():
   generatePage("art.html", "visual art")

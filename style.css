@@ -115,6 +115,10 @@ caption {
   margin-bottom: -43px;
 }
 
+.gameimg:hover {
+  outline: 8px solid #ffaa10;
+}
+
 div.clickable a {
   font-weight: bold;
 }

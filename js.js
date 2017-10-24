@@ -1,7 +1,7 @@
 // main
 window.onload = () => {
   // activateInfoMessages();
-  // activateClickableCells();
+  activateClickableCells();
   // repositionPopupDiv();
 };
 
@@ -27,29 +27,17 @@ function activateInfoMessages() {
 }
 
 function activateClickableCells() {
-  const clickableCells = document.querySelectorAll("td.clickable");
+  const clickableCells = document.querySelectorAll("div.clickable");
   for (let cell of clickableCells) {
-    // Activate a lightbox...
     const lightboxLink = cell.querySelector("a[data-lightbox]");
-    if (lightboxLink) {
-      cell.onclick = (e) => {
-        lightbox.start($(lightboxLink));
-        e.stopPropagation();
+    const link = cell.querySelector("a");
+    const img = cell.querySelector("img");
+    // Activate a link image
+    // That isn't controlled by lightbox
+    if (!lightboxLink && link && img) {
+      img.onclick = (e) => {
+        link.click();
       }
-      continue;
-    } else {
-
-      // Activate a link...
-      const link = cell.querySelector("a");
-      // if (link) {
-      //   cell.onclick = (e) => {
-      //     link.click();
-      //     e.stopPropagation();
-      //   }
-      // }
-
-      // Activate a link image
-      const img = cell.querySelector("img");
     }
   }
 }

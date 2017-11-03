@@ -34,6 +34,10 @@ def generateGamesPage():
   generatePage("glitchdungeon.html", "glitch dungeon", "/games")
   generatePage("goblin.html", "goblin catcher", "/games")
   generatePage("monkeyking.html", "the monkey king", "/games")
+  generatePage("pixelpets.html", "pixel pets", "/games")
+  generatePage("echoisland.html", "echo island", "/games")
+  generatePage("gauntlet.html", "gauntlet of love", "/games")
+  generatePage("dungeon.html", "dungeon of trials", "/games")
 
 def generateMockupPages():
   generatePage("rgb.html", "rgb mockup", "/games")

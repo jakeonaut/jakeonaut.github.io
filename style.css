@@ -1,13 +1,20 @@
 body {
+  background-image:url('content/bg.jpg');
   font-family: 'Courier New', 'Courier', monospace;
   margin: 0;
   padding: 0;
 }
 
+#about-header-wrapper {
+  margin: 28px;
+  width: 88%;
+}
+
 #about-header {
-  background-image:url('content/about/sagittarius.png'); 
-  background-position: -85px;
-  height:300px
+  background-image: url('content/about/jake.jpg');
+  background-position: center;
+  height: 360px;
+  background-size: contain;
 }
 
 .fancy img {
@@ -78,6 +85,10 @@ div.title {
   margin-left: 165px;
 }
 
+div.title.applink {
+  margin-left: 16px;
+}
+
 .column {
   width: 189px;
 }
@@ -117,6 +128,22 @@ caption {
 
 .gameimg:hover {
   outline: 8px solid #ffaa10;
+}
+
+.appimg {
+  cursor: pointer;
+  outline: 1px solid blue;
+  max-width: 500px;
+  min-width: 300px;
+  height: 200px;
+}
+
+.appimg:hover {
+  outline: 8px solid #ffaa10;
+}
+
+.links-container img {
+	max-width: 300px;
 }
 
 div.clickable a {
@@ -207,11 +234,11 @@ li {
 
 /*********************** RESPONSIVE MOBILE UI *****************************/
 @media screen and (max-width: 650px) {
-	.left {
-	  width: 100%;
-	}
+  .left {
+    width: 100%;
+  }
 
-	.right {
+  .right {
 	  width: 100%;
   }
 
@@ -223,5 +250,11 @@ li {
     margin-bottom: 0px;
     position: static;
     width: 75px;
+  }
+  
+  .appimg {
+    max-width: 300px;
+    min-width: 150px;
+    height: 100px;
   }
 }

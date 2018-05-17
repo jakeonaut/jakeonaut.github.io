@@ -39,6 +39,30 @@ iframe {
   margin: 0 auto;
 }
 
+.socialmedia-small b {
+  position: relative;
+  top: -11px;
+}
+
+.socialmedia-small img {
+  margin: 8px;
+  margin-bottom: 0;
+  margin-top: 16px;
+  width: 32px;
+  height: 32px;
+}
+
+.socialmedia img {
+  margin: 16px;
+  margin-bottom: 0;
+  width: 64px;
+  height: 64px;
+}
+
+.social-media-table .right {
+  font-size: 24px;
+}
+
 /* https://stackoverflow.com/questions/248011/how-do-i-wrap-text-in-a-pre-tag */
 pre {
   white-space: pre-wrap;       /* Since CSS 2.1 */
@@ -103,6 +127,14 @@ div.title.applink {
 
 .left {
   width: 19%
+}
+
+.left a img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  position: relative;
+  top: 3px;
 }
 
 .right {
@@ -202,29 +234,32 @@ li {
 }
 
 
-.nav tr {
+.nav .row {
   margin-bottom: 3px;
+  margin-top: 3px;
 }
 
-.nav td {
+.nav .row div {
   border: 1px solid grey;
   font-size: 24px;
   font-weight: bold;
   overflow: hidden;
   vertical-align: top;
   padding: 10px;
+  margin-right: 3px;
+  width: 15%
 }
 
-.nav td:hover {
+.nav .row div:hover {
   background: #f73b99;
   cursor: pointer;
 }
 
-.nav td.selected {
+.nav .row div.selected {
   background-color: #e49191;
 }
 
-.nav td a {
+.nav .row div a {
   color: black;
   display: block;
   margin: -10px;
@@ -234,6 +269,10 @@ li {
 
 /*********************** RESPONSIVE MOBILE UI *****************************/
 @media screen and (max-width: 650px) {
+  .nav .row div {
+    width: 25%
+  }
+  
   .left {
     width: 100%;
   }
@@ -256,5 +295,15 @@ li {
     max-width: 300px;
     min-width: 150px;
     height: 100px;
+  }
+  
+  .socialmedia img {
+    margin: 4px;
+    margin-bottom: 0;
+  }
+  
+  .column:not(.solo) {
+	  overflow-x: hidden;
+	  width: 22%;
   }
 }

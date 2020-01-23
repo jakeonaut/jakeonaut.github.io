@@ -270,15 +270,18 @@ li {
 /*********************** RESPONSIVE MOBILE UI *****************************/
 @media screen and (max-width: 650px) {
   .nav .row div {
-    width: 25%
+    width: 25%;
+    margin-top: 3px; margin-bottom: 3px; margin-left:3px;
   }
   
-  .left {
+  .left,
+  .column:not(.solo).left {
     width: 100%;
   }
 
-  .right {
-	  width: 100%;
+  .right, 
+  .column:not(.solo).right {
+    width: 100%;
   }
 
   div.title {
@@ -304,6 +307,6 @@ li {
   
   .column:not(.solo) {
 	  overflow-x: hidden;
-	  width: 22%;
+	  width: 25%;
   }
 }

@@ -11,10 +11,10 @@ body {
 }
 
 #about-header {
-  background-image: url('content/about/jake.jpg');
+  background-image: url('content/jakecool.jpg');
   background-position: center;
   height: 360px;
-  background-size: contain;
+  background-size: cover;
 }
 
 .fancy img {

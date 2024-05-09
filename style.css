@@ -259,6 +259,11 @@ li {
   background-color: #e49191;
 }
 
+/** I should rewrite this website */
+.nav .row div:nth-child(3) {
+  display: none;
+}
+
 .nav .row div a {
   color: black;
   display: block;
@@ -296,7 +301,6 @@ li {
   
   .appimg {
     max-width: 300px;
-    min-width: 150px;
     height: 100px;
   }
   
